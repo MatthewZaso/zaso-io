@@ -1,0 +1,220 @@
+/** Timeline **/
+
+.timeline__header {
+  color: $colorDarkGray;
+  margin-bottom: 30px;
+}
+
+.timeline__wrapper {
+  margin: 0;
+  padding: 0;
+  height: 85px;
+  position: relative;
+  display: flex;
+
+  &:before {
+    content: 'Present';
+    color: #5b6268;
+    font-size: 14px;
+    padding-left: 5px;
+    right: 0;
+    height: 45px;
+    width: 55px;
+    border-right: 1px solid #5b6268;
+    top: -48px;
+    position: absolute;
+  }
+
+  *:before,
+  *:after,
+  &:before {
+    transition: 0.3s opacity ease-out;
+  }
+
+  &:hover {
+    .timeline__company__sub-marker { display: none; }
+  }
+}
+
+.timeline__company {
+  //transform: scaleX(1);
+  padding: 30px;
+  height: 100%;
+  transition: 0.3s flex-basis ease-in-out;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  list-style-type: none;
+  flex: 1 1 0em;
+  will-change: flex-basis;
+
+  &:hover {
+    //transform: scaleX(1);
+    z-index: 1;
+    flex-basis: 50em;
+
+    .timeline__company__text {
+      transition: 0.3s opacity ease-in;
+      transition-delay: 0.1s;
+      opacity: 1;
+    }
+
+    .timeline__company__hint {
+      opacity: 0;
+      transition: 0.3s opacity ease-in;
+    }
+  }
+
+  &:before {
+    content: '';
+    color: #5b6268;
+    font-size: 14px;
+    padding-left: 5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-left: 1px solid #5b6268;
+    top: -28px;
+    position: absolute;
+  }
+
+  &:after {
+    content: '';
+    color: #5b6268;
+    font-size: 14px;
+    padding-left: 5px;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    border-left: 1px solid #5b6268;
+    bottom: -38px;
+    position: absolute;
+  }
+}
+
+.timeline__company__hint {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 34px;
+  font-weight: 800;
+
+  svg {
+    display: inline-block;
+    fill: white;
+  }
+}
+
+.timeline__company__text {
+  opacity: 0;
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeline__company__title {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.timeline__company__location {
+  font-weight: 200;
+}
+
+.timeline__company__dates {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.timeline__company__sub-markers {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 25px;
+}
+
+.timeline__company__sub-marker {
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: '';
+    color: #5b6268;
+    font-size: 14px;
+    padding-left: 5px;
+    right: -65px;
+    height: 35px;
+    width: 65px;
+    border-left: 1px solid #5b6268;
+    bottom: -38px;
+    position: absolute;
+  }
+
+  &:nth-of-type(1) {
+    &:after {
+      content: 'Developer Level 2';
+    }
+  }
+
+  &:nth-of-type(2) {
+    &:after {
+      content: 'Senior Developer';
+    }
+  }
+}
+
+
+.timeline__company--rga {
+  background-color: #db1731;
+  // transform-origin: 0 0;
+  // transform: scaleX(0.1);
+  // left: 0;
+
+  &:before { content: '2011'; }
+  &:after { content: 'Intern'; }
+}
+
+.timeline__company--mode {
+  background-color: #616263;
+  // transform-origin: 10% 0;
+  // transform: scaleX(0.1) translateX(10%);
+
+  &:before { content: '2012'; }
+  &:after { content: 'Intern'; }
+}
+
+.timeline__company--ba {
+  background-color: #f79427;
+  // transform-origin: 22.2% 0;
+  // transform: scaleX(0.1);
+
+  &:before { content: '2013'; }
+  &:after { content: 'Intern'; }
+}
+
+.timeline__company--odopod {
+  flex: 9 1 0em;
+  background-color: #ff4e56;
+  // transform-origin: 100% 0;
+  // transform: scaleX(0.7);
+  // right: 0;
+
+  &:before { content: '2013'; }
+  &:after { content: 'Developer'; }
+}
+
+@include breakpoint(sm, true) {
+  .timeline__wrapper {
+    *:after { display: none; }
+  }
+  .timeline__company__location { display: none; }
+  .timeline__company__dates { display: none; }
+}
