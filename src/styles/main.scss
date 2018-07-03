@@ -20,6 +20,11 @@
 
 @import "node_modules/@odopod/odo-sassplate/global-rules/print";
 
+@import "node_modules/@odopod/odo-carousel/css/odo-carousel";
+@import "node_modules/@odopod/odo-carousel/css/odo-carousel-theme";
+
+@import "node_modules/@odopod/odo-dialog/css/odo-dialog";
+
   // Defining colors
   $colorWhite: #fff !default;
   $colorBlack: #000 !default;
@@ -56,6 +61,7 @@
 @import "components/_modules/_skill-circles";
 @import "components/_modules/_intro-list";
 @import "components/_modules/_timeline";
+@import "components/_modules/_card-carousel";
 
 html, body, button {
   -webkit-font-smoothing: antialiased;
@@ -68,6 +74,10 @@ body {
   font-weight: 300;
   box-sizing: border-box;
   min-height: 100%;
+}
+
+p {
+  line-height: 1.5;
 }
 
 .header {
