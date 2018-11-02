@@ -201,13 +201,24 @@
 }
 
 .timeline__company--odopod {
-  flex: 9 1 0em;
+  flex: 8 1 0em;
   background-color: #ff4e56;
   // transform-origin: 100% 0;
   // transform: scaleX(0.7);
   // right: 0;
 
   &:before { content: '2013'; }
+  &:after { content: 'Developer'; }
+}
+
+.timeline__company--intercom {
+  flex: 1 1 0em;
+  background-color: #286efa;
+  // transform-origin: 100% 0;
+  // transform: scaleX(0.7);
+  // right: 0;
+
+  &:before { content: '2018'; }
   &:after { content: 'Developer'; }
 }
 
