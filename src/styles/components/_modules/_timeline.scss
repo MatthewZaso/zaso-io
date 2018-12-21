@@ -220,6 +220,10 @@
 
   &:before { content: '2018'; }
   &:after { content: 'Developer'; }
+
+  .timeline__company__hint {
+    bottom: 0;
+  }
 }
 
 @include breakpoint(sm, true) {
