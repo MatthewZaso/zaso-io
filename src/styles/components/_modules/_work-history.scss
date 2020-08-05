@@ -1,0 +1,71 @@
+/** Work History **/
+
+.work-history__job[data-company="rga"] {
+  .work-history__logo {
+    border-color: #db1731;
+  }
+}
+
+.work-history__job[data-company="mode"] {
+  .work-history__logo {
+    border-color: #616263;
+  }
+}
+
+.work-history__job[data-company="brand-networks"] {
+  .work-history__logo {
+    border-color: #f79427;
+  }
+}
+
+.work-history__job[data-company="odopod"] {
+  .work-history__logo {
+    border-color: #ff4e56;
+  }
+}
+
+.work-history__job[data-company="intercom"] {
+  .work-history__logo {
+    border-color: #6AFDEF;
+  }
+}
+
+.work-history__job {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-column-gap: 30px;
+  margin-bottom: 8px;
+}
+
+.work-history__logo {
+  grid-row: 1 / 10;
+  border-right: 3px solid black;
+  padding: 15px;
+}
+
+.work-history__company {
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  font-size: 32px;
+}
+
+.work-history__location {
+  margin: 8px 0;
+}
+
+.work-history__role,
+.work-history__location,
+.work-history__experience {
+  grid-column: 2 / -1;
+}
+
+.work-history__experience {
+  li {
+    padding: 10px 0;
+  }
+
+  a {
+    color: black;
+  }
+}
