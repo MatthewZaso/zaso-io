@@ -30,6 +30,12 @@
   }
 }
 
+.work-history__job[data-company="asana"] {
+  .work-history__logo {
+    border-color: #FC636B;
+  }
+}
+
 .work-history__job {
   display: grid;
   grid-template-columns: 80px 1fr;

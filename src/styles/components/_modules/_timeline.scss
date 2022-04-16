@@ -219,10 +219,27 @@
   // right: 0;
 
   &:before { content: '2018'; }
-  &:after { content: 'Developer'; }
+  &:after { content: 'Product Engineer'; }
 
   .timeline__company__hint {
     bottom: 0;
+  }
+}
+
+.timeline__company--asana {
+  background-color: #FC636B;
+
+  &:before { content: '2018'; }
+  &:after { content: 'Software Engineer'; }
+
+  .timeline__company__hint {
+    bottom: 0;
+
+    svg {
+      height: 24px;
+      width: 22px;
+      margin-bottom: -5px;
+    }
   }
 }
 
