@@ -36,6 +36,6 @@
   },
   "dependencies": {
     "core-js": "^2.5.7",
-    "express": "^4.16.4"
+    "express": "^4.17.3"
   }
 }
